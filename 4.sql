@@ -1,8 +1,5 @@
-USE BsAll;
+USE master;
 GO
-OPEN SYMMETRIC KEY UserSymmetricKey
-DECRYPTION BY CERTIFICATE UserCertificate;
-SELECT 
-    userName, 
-    CAST(DECRYPTBYKEY(CONVERT(varbinary(max), userPassword)) AS VARCHAR(5)) as userPassword 
-FROM Users;
+BACKUP DATABASE BDAll TO DISK = 'C:\Users\eodm2\Documents\backup\BDAll.bak'
+GO
+
