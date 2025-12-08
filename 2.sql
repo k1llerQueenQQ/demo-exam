@@ -1,4 +1,3 @@
-use BDAll;
-
-update Users
-set userPassword = ENCRYPTBYPASSPHRASE('TEST',userPassword);
+USE BDAll
+UPDATE Users
+SET userPassword =ENCRYPTBYPASSPHRASE('Password',userPassword);

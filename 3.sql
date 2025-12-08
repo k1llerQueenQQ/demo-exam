@@ -1,4 +1,4 @@
-SELECT 
-    userName,
-    CONVERT(VARCHAR, DECRYPTBYPASSPHRASE('TEST', userPassword)) AS 'Расшифрованный пароль'
-FROM Users;
+USE BDAll
+SELECT userName AS 'User',
+	CONVERT(varchar(5),DECRYPTBYPASSPHRASE('Password', userPassword)) AS 'Password'
+FROM Users
